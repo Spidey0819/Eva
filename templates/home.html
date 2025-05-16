@@ -1,0 +1,346 @@
+<html>
+<head>
+    <title>EVA</title>
+</head>
+<style>
+body{
+    background-image: url('/static/bulletin/images.jpg');
+    background-repeat: no-repeat;
+    background-size: 1550px 750px;
+    text-align: center;
+    }
+
+.face{
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:150;
+   margin-left:316px;
+   margin-top:165px;
+   height:120;
+   width:160;
+   background:black;
+   border-top-left-radius:20px;
+   border-top-right-radius:20px;
+   border-bottom-left-radius:10px;
+   border-bottom-right-radius:10px;
+}
+.head{
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:150;
+   margin-left:280px;
+   margin-top:140px;
+   height:165;
+   width:230;
+   z-index:-1;
+   background:white;
+   border-top-left-radius:60px;
+   border-top-right-radius:60px;
+   border-bottom-left-radius:10px;
+   border-bottom-right-radius:10px;
+}
+.body{
+   position:absolute;
+   top:60;
+   left:0;
+   right:0;
+   bottom:0;
+   margin-left:280px;
+   margin-top:255px;
+   height:250;
+   width:230;
+   background:white;
+   border-top-left-radius:20px;
+   border-top-right-radius:20px;
+   border-bottom-left-radius:100px;
+   border-bottom-right-radius:100px;
+}
+.left-hand{
+   position:absolute;
+   top:0;
+   left:0;
+   right:230;
+   bottom:25;
+   margin-left:50px;
+   margin-top:309px;
+   height:60;
+   width:220;
+   background:white;
+   border-top-left-radius:10px;
+   border-top-right-radius:10px;
+   border-bottom-left-radius:50px;
+   border-bottom-right-radius:10px;
+   animation:hand 1s linear infinite;
+   transform: rotateZ(45deg);
+}
+.right-hand{
+   position:absolute;
+   top:50;
+   left:165;
+   right:0;
+   bottom:0;
+   margin-left:275px;
+   margin-top:347px;
+   height:60;
+   width:220;
+   background:white;
+   border-top-left-radius:10px;
+   border-top-right-radius:10px;
+   border-bottom-left-radius:10px;
+   border-bottom-right-radius:50px;
+   transform: rotateZ(90deg)
+}
+@keyframes hand{
+0%{
+transform:translateY(-40px) rotateZ(45deg);
+}
+50%{
+transform:translateY(0px) rotateZ(-0deg);
+}
+100%{
+transform:translateY(-40px) rotateZ(45deg);
+}
+}
+.eye1{
+position:absolute;
+  top:0;
+  left:0;
+  right:25;
+  bottom:150;
+  margin-left:340px;
+  margin-top:200px;
+  height:25px;
+  width:40px;
+  background:repeating-linear-gradient(blue 70%, #002966 80%, blue);
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  animation:blink 2s linear infinite;
+}
+.eye2{
+position:absolute;
+  top:0;
+  left:25;
+  right:0;
+  bottom:150;
+  margin-left:380px;
+  margin-top:200px;
+  height:25px;
+  width:40px;
+  background:repeating-linear-gradient(blue 70%, #002966 80%, blue);
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  animation:blink 2s linear infinite;
+}
+@keyframes blink{
+0%{
+height:10px;
+}
+25%{
+height:6px;
+}
+50%{
+height:1px;
+}
+75%{
+height:6px;
+}
+100%{
+heigth:10px;
+}
+}
+.smile{
+position:absolute;
+  top:150;
+  left:0;
+  right:0;
+  bottom:0;
+  margin-left:363px;
+  margin-top:92px;
+  height:25px;
+  width:60px;
+  background:repeating-linear-gradient(blue 70%, #002966 80%, blue);
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius:50px;
+  animation:blink 2s linear infinite;
+}
+*{
+         margin:0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      html{
+      	height: 100%;
+      }
+    body{     
+
+      <!--background: #fafafa-->;	
+		    font-family: 'times new roman', sans-serif;
+      	font-size: 1rem;
+      	height: 100%;
+      	line-height: 1.6;
+      }
+      .wrap {
+      	width: 350px;
+      	margin: 23px auto;
+      	background: #fafafa;
+     }
+    .login-form{
+        width: 350px;
+        margin-left:400px;
+        margin-top: 100px;
+        border: 1px solid #ddd;
+        padding: 2rem;
+        background: #ffffff;
+    }
+    .form-input{
+        background: #fafafa;
+        border: 1px solid #eeeeee;
+        padding: 12px;
+        width: 100%;
+    }
+    .form-group{
+        margin-bottom: 1rem;
+    }
+    .form-button{
+       background: #69d2e7;
+       border: 1px solid #ddd;
+       color: #ffffff;
+       padding: 10px;
+       width: 100%;
+       text-transform: uppercase;
+   }
+   .form-button:hover{
+       background: #69c8e7;
+   }
+   .form-header{
+     text-align: center;
+     margin-bottom : 2rem;
+   }
+   .form-footer{
+     text-align: center;
+    }
+   .flipcard{
+     background-color: transparent;
+     width : 250px;
+     perspective: 500px;
+   }
+  .flipcard-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+   }
+  .flipcard-front, .flipcard-back{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    backface-visibility: hidden;
+   }
+  .flipcard-front{
+    color: black;
+   }
+  .flipcard-back{
+    background-color: dodgerblue;
+    transform: rotateY(180deg);
+  }
+  input[type="checkbox"]:checked + .flipcard .flipcard-inner{
+    transform: rotateY(180deg);
+  }
+  .form-button-register{
+     background: #2c91d8;
+   }
+   .form-button-register:hover{
+     background: #2c91a8;
+   }
+.switch_form:before{
+    content: " ";
+    display: block;
+    background:red;
+}
+.label-highlight{
+    color: blue;
+}
+</style>
+<body>
+<a href="listening.html" ><button><b>Start Recognization</b></button></a>
+<div class="face"></div>
+<div class="head"></div>
+<div class="body"></div>
+<div class="left-hand"></div>
+<div class="right-hand"></div>
+<div class="eye1"></div>
+<div class="eye2"></div>
+<div class="smile"></div>
+   <div class="wrap">
+        <input type="checkbox" id="form_switch" style="display: none;">
+	<div class="flipcard">
+	    <div class="flipcard-inner">
+		<div class="flipcard-front">
+		    <form class="login-form" action="">
+            		<div class="form-header">
+                	    <h3>Login Form</h3>
+                	    <p>Login to access your dashboard</p>
+            		</div>
+                        <!--Email Input-->
+            		<div class="form-group">
+		            <input type="text" class="form-input" name="email" placeholder="email@example.com">
+            		</div>
+            		<!--Password Input-->
+            		<div class="form-group">
+                	    <input type="password" class="form-input" name="password" placeholder="password">
+            		</div>
+            		<!--Login Button-->
+            		<div class="form-group">
+                  <button class="form-button" type="button" onclick="location.href='http://127.0.0.1:8020/listening.html'">login</button>
+            		</div>
+            		<div class="form-footer">
+            		 Don't have an account? <label class="label-highlight" for="form_switch"> Sign Up </label>
+            		</div>
+        	</form>
+	</div>
+	<div class="flipcard-back">
+             <form class="login-form" action="">
+            	<div class="form-header">
+             	    <h3>Signup Form</h3>
+                    <p>Register for a new account</p>
+            	</div>
+		<!--Email Input-->
+		<div class="form-group">
+  		    <input type="text" class="form-input" name="email" placeholder="email@example.com">
+            	</div>
+            	<!--Password Input-->
+            	<div class="form-group">
+                   <input type="password" class="form-input" name="password" placeholder="Password">
+            	</div>
+            	<!--Password Input-->
+            	<div class="form-group">
+                    <input type="password" class="form-input" name="confirm_password" placeholder="Confirm Password">
+            	</div>
+            	<!--Login Button-->
+            	<div class="form-group">
+                    <button class="form-button form-button-register" type="submit">Signup</button>
+            	</div>
+            	<div class="form-footer">
+            	    Already have an account? <label class="label-highlight" for="form_switch"> Login</label>
+            	</div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
